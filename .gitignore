@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+.env
+credentials.json
+token.pickle
+timetable_mine.xlsx
