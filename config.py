@@ -4,3 +4,4 @@ config = Config(".env")
 
 CREDENTIALS_PATH: str = config("CREDENTIALS_PATH")
 TIMETABLE_PATH: str = config("TIMETABLE_PATH")
+TOKEN_FILE: str = config("TOKEN_FILE")

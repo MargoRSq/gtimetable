@@ -1,6 +1,9 @@
 __pycache__/
 .venv/
+.DS_Store/
+
 .env
 credentials.json
 token.pickle
 timetable_mine.xlsx
+timetable_mine_old.xlsx
