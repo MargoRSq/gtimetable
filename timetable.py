@@ -1,3 +1,4 @@
+from sys import argv
 from datetime import datetime, timedelta, date
 
 class UniversityClass:
@@ -10,7 +11,7 @@ class UniversityClass:
         self.set_start_end_dt(time)
 
     def set_start_end_dt(self, time_str: str):
-        first_day = date(2021, 8, 30)
+        first_day = datetime.strptime(argv[1], "%d/%m/%Y")
         today = datetime.today()
         week_num = int(datetime.today().strftime("%W")) - int(first_day.strftime("%W"))
         week_mn = 1 if week_num % 2 == self.wtype else 0

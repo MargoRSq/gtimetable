@@ -16,7 +16,6 @@ def post_to_gcalendar(gc, events: List[UniversityClass], until_time: datetime):
                 end=et.end,
                 recurrence=[
                 Recurrence.rule(freq=WEEKLY, interval=2, until=until_time)],
-                minutes_before_popup_reminder=15,
             )
             gc.add_event(event)
 
