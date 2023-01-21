@@ -1,10 +1,11 @@
 import io
 import requests
-import openpyxl
+import openpyxl.reader.excel
+
 from pathlib import Path
 from typing import List
 
-from timetable import UniversityClass
+from src.timetable import UniversityClass
 
 
 def parse_rasp(file):
@@ -21,6 +22,7 @@ def parse_rasp(file):
         event_list.extend([odd_class, even_class])
 
     return event_list
+
 
 def get_new_timetable_from_file(path: str) -> List[UniversityClass]:
     xlsx_file = Path(path)

@@ -1,6 +1,7 @@
 from sys import argv
 from datetime import datetime, timedelta, date
 
+
 class UniversityClass:
 
     def __init__(self, class_name: str, time: str, wday: int, wtype: int):
