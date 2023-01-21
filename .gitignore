@@ -3,5 +3,5 @@ __pycache__/
 .DS_Store/
 
 .env
-credentials.json
-token.pickle
+**/*credentials.json
+**/*token.pickle
