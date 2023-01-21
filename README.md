@@ -12,7 +12,7 @@ Timetable.xslx |  Google Calendar
 
 ### Required:
  - Python3.10 or higher
- - Google Cloud Credentials (**credentials.json**) for Google Calendar ([guide](https://developers.google.com/workspace/guides/create-credentials))
+ - Google Cloud Credentials (`credentials.json`) for Google Calendar ([guide](https://developers.google.com/workspace/guides/create-credentials))
  <!-- - [Poetry](https://python-poetry.org/) or [virtualenv](https://virtualenv.pypa.io/en/latest/)  -->
 
 
@@ -22,7 +22,8 @@ You can also install packages from `requirements.txt` file
 
 ## ⚡Usage
 
-Change `timetable.xlsx` file for yourself and run `main.py` with 2 args
+1. Put your `credentials.json` file into `credentials` folder
+2. Change `timetable.xlsx` file for yourself and run `main.py` with 2 args
 
 - date until you timetable will be filled in calendar in format `day/month/year`
 - `timetable.xslx` or new filename for `.xslx` file that you want to parse
