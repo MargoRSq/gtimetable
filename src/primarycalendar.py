@@ -20,27 +20,29 @@ class PrimaryCalendar(GoogleCalendar):
 
     def auth(self) -> GoogleCalendar:
         gc = None
-        while (gc == None):
+        while (gc is None):
             try:
                 gc = GoogleCalendar(credentials_path=self.cred_path)
             except RefreshError:
                 os.remove(self.cred_path + "/token.pickle")
         return gc
 
-
-    def post_to_gcalendar(self, events: List[UniversityClass], until_time: datetime):
+    def post_to_gcalendar(self, events: List[UniversityClass],
+                          start_time: datetime, until_time: datetime):
         for et in events:
             if et.class_name:
                 event = Event(
                     et.class_name,
-                    start=et.start,
+                    start=start_time,
                     end=et.end,
                     recurrence=[
-                        Recurrence.rule(freq=WEEKLY, interval=2, until=until_time)
+                        Recurrence.rule(freq=WEEKLY,
+                                        interval=2,
+                                        until=until_time)
                     ],
                 )
                 self.gc.add_event(event)
-
+        # events.append()
 
     def delete_events(self):
         """Be careful, it will delete all of your events in this calendar"""
